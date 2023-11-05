@@ -11,44 +11,52 @@
 
 <body>
     <div class="main-container">
-        <header class="navmenu">
-            <img src="/Assets/images/logo/ohmyfood.png" alt="logo Oh my food">
-        </header>
-        <div class="position">
-            <form action="get">
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="search" name="localisation" id="localisation" placeholder="Paris, Belleville">
 
-            </form>
-        </div>
+        <header class="navmenu">
+            <div class="logo">
+                <img src="/Assets/images/logo/ohmyfood.png" alt="logo Oh my food">
+            </div>
+            <div class="position">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Paris, Belleville </p>
+            </div>
+        </header>
 
 
         <section class="reservez-votre-menu">
-            <h1 class="titre-reservation"> Réservez le menu qui vous convient</h1>
-            <p class="p__reserver">Découvrez des restaurants d'exception,sélectionnés par nos soins</p>
+
+            <h1 class="titre-reservation"> Réservez le menu qui <br> vous convient</h1>
+            <p class="p__reserver">Découvrez des restaurants d'exception, <br> sélectionnés par nos soins</p>
             <div class="bouton">
-                <button class="btn"> Explorer nos restaurants</button>
+                <button class="btn"> Explorer nos restaurants </button>
             </div>
+
         </section>
 
         <section class="fonction">
             <h2 class="titre-fonction"> Fonctionnement</h2>
             <div class=" fonction__bt">
+
                 <div class="fonction-content">
                     <p class="fonction_number">1 </p>
                     <i class="fonction__icon fa-solid fa-mobile-screen-button"></i>
                     <p> Choisissez un restaurant </p>
                 </div>
+
+
                 <div class="fonction-content">
                     <p class="fonction_number">2 </p>
                     <i class="fonction__icon fa-solid fa-list"></i>
                     <p> Composez votre menu </p>
                 </div>
+
+
                 <div class="fonction-content">
                     <p class="fonction_number">3 </p>
-                    <i class="fonction__icon fa-solid fa-store"></i>
+                    <i class=" fa-solid fa-store"></i>
                     <p> Dégustez au restaurant</p>
                 </div>
+
             </div>
         </section>
 
@@ -62,7 +70,11 @@
                         <a href="/Assets/Restaurants/Palette-du-gout">
                             <img src="/Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                                 alt="plat de nourriture">
-                            <p class="pancarte"> Nouveau</p>
+                            <div class="container-new">
+                                <div class="new">
+                                    <p>Nouveau</p>
+                                </div>
+                            </div>
                             <div class="icone-coeur">
                                 <i class="fa-regular fa-heart my-heart-empty"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
@@ -77,31 +89,34 @@
                 </div>
 
                 <div class="card-content">
-                    <a href="/Assets/Restaurants/La-note-enchantée">
-                        <img src="/Assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="plat de nourriture">
-                        <p class="pancarte"> Nouveau</p>
-
-                        <div class="icone-coeur">
-                            <i class="fa-regular fa-heart my-heart-empty"></i>
-                            <i class="fa-solid fa-heart my-heart-full"></i>
-                        </div>
-                        <div class="card-txt">
-                            <h3 class="card-title"> La note enchantée</h3>
-                            <p class="card-subtitle"> Charonne
-                            </p>
-                        </div>
-                    </a>
-
+                    <article class="card">
+                        <a href="/Assets/Restaurants/La-note-enchantée">
+                            <img src="/Assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="plat de nourriture">
+                            <div class="container-new">
+                                <div class="new">
+                                    <p>Nouveau</p>
+                                </div>
+                            </div>
+                            <div class="icone-coeur">
+                                <i class="fa-regular fa-heart my-heart-empty"></i>
+                                <i class="fa-solid fa-heart my-heart-full"></i>
+                            </div>
+                            <div class="card-txt">
+                                <h3 class="card-title"> La note enchantée</h3>
+                                <p class="card-subtitle"> Charonne
+                                </p>
+                            </div>
+                        </a>
+                    </article>
                 </div>
 
 
                 <div class="card-content">
                     <article class="card">
-
                         <a href="/Assets/Restaurants/A-la-française">
                             <img src="/Assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                 alt="plat de nourriture">
-
                             <div class="icone-coeur">
                                 <i class="fa-regular fa-heart my-heart-empty"></i>
                                 <i class="fa-solid fa-heart my-heart-full"></i>
@@ -133,6 +148,7 @@
                         </a>
                     </article>
                 </div>
+
             </div>
         </section>
 
@@ -140,13 +156,17 @@
 
 
     <footer>
-        <div class="footer-title"> ohmyfood</div>
-        <ul>
-            <li><i class="fa-solid fa-utensils"></i> <strong>Proposer un restaurant </strong></li>
-            <li><i class="fa-solid fa-handshake"></i> <strong> Devenir partenaire </strong></li>
-            <li> Mentions légales</li>
-            <li> <a href="mailto:test@test.fr"> Contact</a></li>
-        </ul>
+
+        <div class="footercontent">
+            <img class="logofooter" src="/Assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+
+            <ul class="liste">
+                <li><i class="fa-solid fa-utensils"></i> <strong>Proposer un restaurant </strong></li>
+                <li><i i class="fa-solid fa-handshake-angle"></i> <strong> Devenir partenaire </strong></li>
+                <li> Mentions légales</li>
+                <li> <a href="mailto:test@test.fr"> Contact</a></li>
+            </ul>
+        </div>
 
     </footer>
 

@@ -4,6 +4,223 @@
 @import "elements/background-color.scss";
 @import "elements/font.scss";
 
-header {
-    color: red;
+body {
+    width: 100%;
+    font-family: $font-family_1;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: $color_1;
+}
+
+.logo {
+    @include logo;
+}
+
+.position {
+    @include flexcenter;
+    background-color: $background-color_1;
+    width: 100%;
+    gap: 17px;
+
+    .p {
+        margin-left: 20px;
+    }
+}
+
+.reservez-votre-menu {
+    text-align: center;
+    background-color: $background-color_2 ;
+    padding-top: 20px;
+    width: 100%;
+    padding-bottom: 35px;
+
+    H1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 20px;
+
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300px;
+    }
+
+
+    .btn {
+        @include btn;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+
+}
+
+
+.fonction {
+    margin: 20px 0 50px 20px;
+
+    .fonction__bt {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .fonction-content {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background-color: $background-color_2;
+        box-shadow: 0px 4px 15px 0px #00000026;
+        height: 70px;
+        margin: 10px;
+        width: 90%;
+    }
+
+    .fonction_number {
+
+        background-color: $background-color_3;
+        color: $color_1;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -10px;
+    }
+
+    h2 {
+        display: inline-block;
+    }
+
+
+
+    p {
+        display: block;
+        margin: 5px 0 0 17px;
+        color: $color_4;
+    }
+
+    .fonction__icon {
+        margin-left: 20px;
+        color: $color_3;
+    }
+
+    .fa-store {
+        margin-left: 20px;
+        color: $color_2;
+    }
+
+}
+
+.restaurant {
+    background-color: $background-color_2;
+
+    h2 {
+        display: inline-block;
+        margin: 40px 10px 20px 20px
+    }
+
+    .restaurant-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        background-color: $background-color_4;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-radius: 0 0 20px 20px;
+        margin-left: 15px;
+
+
+
+        img {
+            height: 231px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .container-new {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 25px;
+
+            .new {
+                position: absolute
+            }
+
+            p {
+                @include flexcenter;
+                height: 30px;
+                padding: 5px 15px;
+                color: $color_7;
+                background-color: $background-color_5;
+                border-radius: 5%;
+            }
+        }
+
+        .card-txt {
+            color: $color_4 ;
+
+            h3 {
+                display: inline-block;
+                margin: 20px 0 0 15px;
+                border-radius: 20px 20px 0 0;
+            }
+
+            p {
+                margin: 5px 0 0 17px;
+            }
+        }
+
+
+
+
+    }
+}
+
+footer {
+    display: flex;
+    background-color: $background-color_6;
+    width: 100%;
+    height: 186px;
+    color: $color_1;
+
+    .footercontent {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logofooter {
+        filter: invert(1);
+        padding-left: 9px;
+        width: 139px;
+        height: 20px;
+    }
+
+    .liste {
+        padding-left: 20px;
+        list-style: none;
+
+    }
+
+    .fa-solid {
+        margin-right: 10px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
 }
