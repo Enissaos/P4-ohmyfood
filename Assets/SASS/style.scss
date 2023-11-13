@@ -7,7 +7,7 @@
 body {
     width: 100%;
     font-family: $font-family_1;
-    margin: 0;
+    margin: 0px;
 
 }
 
@@ -16,18 +16,29 @@ a {
 
 }
 
-.logo {
-    @include logo;
-}
+.navmenu {
 
-.position {
-    @include flexcenter;
-    background-color: $background-color_1;
-    width: 100%;
-    gap: 17px;
 
-    .p {
-        margin-left: 20px;
+    .logo {
+        @include logo;
+
+
+    }
+
+
+    .position {
+        @include flexcenter;
+        background-color: $background-color_1;
+        width: 100%;
+        gap: 17px;
+        border-top: 2px solid #CCCCCC;
+
+
+
+        .p {
+            margin-left: 20px;
+
+        }
     }
 }
 
@@ -141,9 +152,9 @@ a {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
         margin-bottom: 30px;
         padding-bottom: 20px;
-        width: 90%;
+        width: 400px;
         border-radius: 15px;
-        margin-left: 15px;
+
         position: relative;
 
 
@@ -156,6 +167,8 @@ a {
             border-radius: 15px 15px 0 0;
 
         }
+
+
 
         .new {
             position: absolute;
@@ -205,11 +218,16 @@ a {
                 line-height: 3;
                 color: black;
                 width: 2px;
+                cursor: pointer;
             }
 
             .full {
                 position: absolute;
                 opacity: 0;
+                transition-property: all;
+                transition-duration: 400ms;
+
+                &:hover {}
             }
         }
 
@@ -220,8 +238,12 @@ footer {
     display: flex;
     background-color: $background-color_6;
     width: 100%;
-    height: 186px;
+    height: 180px;
     color: $color_1;
+
+    a {
+        color: white;
+    }
 
     .footercontent {
         padding: 20px;
