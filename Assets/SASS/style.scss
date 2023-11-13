@@ -13,7 +13,7 @@ body {
 
 a {
     text-decoration: none;
-    color: $color_1;
+
 }
 
 .logo {
@@ -57,6 +57,7 @@ a {
         font-size: 16px;
         font-weight: 500;
         margin-top: 15px;
+        font-family: $font-family_1;
     }
 
 }
@@ -133,14 +134,18 @@ a {
         justify-content: center;
     }
 
+
+
     .card {
         background-color: $background-color_4;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-        width: 90%;
         margin-bottom: 30px;
         padding-bottom: 20px;
-        border-radius: 0 0 20px 20px;
+        width: 90%;
+        border-radius: 15px;
         margin-left: 15px;
+        position: relative;
+
 
 
 
@@ -149,6 +154,13 @@ a {
             width: 100%;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
+
+        }
+
+        .new {
+            position: absolute;
+            top: 0%;
+            right: 5%;
         }
 
         .container-new {
@@ -156,9 +168,6 @@ a {
             justify-content: flex-end;
             margin-right: 25px;
 
-            .new {
-                position: absolute
-            }
 
             p {
                 @include flexcenter;
@@ -186,6 +195,23 @@ a {
 
 
 
+        .icone-coeur {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 50px;
+
+            .fa-heart {
+                position: absolute;
+                line-height: 3;
+                color: black;
+                width: 2px;
+            }
+
+            .full {
+                position: absolute;
+                opacity: 0;
+            }
+        }
 
     }
 }

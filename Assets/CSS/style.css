@@ -7,7 +7,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
 }
 
 .logo {
@@ -58,6 +57,7 @@ a {
   font-size: 16px;
   font-weight: 500;
   margin-top: 15px;
+  font-family: "Roboto", sans-serif;
 }
 
 .fonction {
@@ -120,11 +120,12 @@ a {
 .restaurant .card {
   background-color: #ffffff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  width: 90%;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-radius: 0 0 20px 20px;
+  width: 90%;
+  border-radius: 15px;
   margin-left: 15px;
+  position: relative;
 }
 .restaurant .card img {
   height: 231px;
@@ -133,13 +134,15 @@ a {
      object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
+.restaurant .card .new {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+}
 .restaurant .card .container-new {
   display: flex;
   justify-content: flex-end;
   margin-right: 25px;
-}
-.restaurant .card .container-new .new {
-  position: absolute;
 }
 .restaurant .card .container-new p {
   display: flex;
@@ -161,6 +164,21 @@ a {
 }
 .restaurant .card .card-txt p {
   margin: 5px 0 0 17px;
+}
+.restaurant .card .icone-coeur {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+.restaurant .card .icone-coeur .fa-heart {
+  position: absolute;
+  line-height: 3;
+  color: black;
+  width: 2px;
+}
+.restaurant .card .icone-coeur .full {
+  position: absolute;
+  opacity: 0;
 }
 
 footer {
