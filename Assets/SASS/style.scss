@@ -13,7 +13,7 @@ body {
 
 a {
     text-decoration: none;
-
+    color: black
 }
 
 .navmenu {
@@ -213,20 +213,20 @@ a {
             justify-content: flex-end;
             margin-right: 50px;
 
-            .fa-heart {
+            .fa-regular {
                 position: absolute;
                 line-height: 3;
                 width: 2px;
                 cursor: pointer;
-            }
-
-            .empty {
                 color: black;
             }
+
 
             .full {
                 position: absolute;
                 opacity: 0;
+                line-height: 3;
+                width: 2px;
 
 
                 &:hover {

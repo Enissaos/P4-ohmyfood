@@ -7,6 +7,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .navmenu .logo {
@@ -170,18 +171,18 @@ a {
   justify-content: flex-end;
   margin-right: 50px;
 }
-.restaurant .card .icone-coeur .fa-heart {
+.restaurant .card .icone-coeur .fa-regular {
   position: absolute;
   line-height: 3;
   width: 2px;
   cursor: pointer;
-}
-.restaurant .card .icone-coeur .empty {
   color: black;
 }
 .restaurant .card .icone-coeur .full {
   position: absolute;
   opacity: 0;
+  line-height: 3;
+  width: 2px;
 }
 .restaurant .card .icone-coeur .full:hover {
   opacity: 1;
