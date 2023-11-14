@@ -1,0 +1,24 @@
+@import "elements/color.scss";
+@import "elements/keyframes.scss";
+@import "elements/mixins.scss";
+@import "elements/background-color.scss";
+@import "elements/font.scss";
+
+body {
+    width: 100%;
+    font-family: $font-family_1;
+    margin: 0px;
+
+}
+
+
+header {
+    .logo {
+        @include logo;
+    }
+
+    .headimg {
+        height: 360px;
+        width: 100%;
+    }
+}
