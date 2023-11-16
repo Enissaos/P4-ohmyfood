@@ -1,8 +1,14 @@
 @import "elements/color.scss";
 
 @import "elements/mixins.scss";
-@import "elements/background-color.scss";
 @import "elements/font.scss";
+
+$background-color_1: #eaeaea;
+$background-color_2: #f6f6f6;
+$background-color_3: #9747ff;
+$background-color_4: #ffffff;
+$background-color_5: #99e2d0;
+$background-color_6: #353535;
 
 body {
     width: 100%;
@@ -11,18 +17,21 @@ body {
 
 }
 
+
+
 a {
     text-decoration: none;
-    color: black
+    color: $color_6
 }
 
 .navmenu {
 
+    h1 {
+        display: none
+    }
 
     .logo {
         @include logo;
-
-
     }
 
 
@@ -32,8 +41,6 @@ a {
         width: 100%;
         gap: 17px;
         border-top: 2px solid #CCCCCC;
-
-
 
         .p {
             margin-left: 20px;
@@ -69,10 +76,14 @@ a {
         font-weight: 500;
         margin-top: 15px;
         font-family: $font-family_1;
+        transition: transform 0.3s;
+
+        &:hover {
+            background: linear-gradient(#ff90e7, #a16eff);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        }
     }
-
 }
-
 
 .fonction {
     margin: 20px 0 50px 20px;
@@ -115,7 +126,7 @@ a {
 
     p {
         display: block;
-        margin: 5px 0 0 17px;
+        margin: 0px 0 0 17px;
         color: $color_4;
     }
 
@@ -133,32 +144,38 @@ a {
 
 .restaurant {
     background-color: $background-color_2;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-bottom: 50px;
 
     h2 {
-        display: inline-block;
-        margin: 40px 10px 20px 20px
+        margin-left: 25px;
+        margin-bottom: 0px;
+        margin-top: 40px;
+        font-size: 24px;
     }
 
-    .restaurant-card {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+
 
 
 
     .card {
+
         background-color: $background-color_4;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
         padding-bottom: 20px;
-        width: 400px;
+        width: 90%;
         border-radius: 15px;
-
         position: relative;
+        margin: 20px;
 
+        .restaurant-card {
 
-
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         img {
             height: 231px;
@@ -189,16 +206,24 @@ a {
                 color: $color_7;
                 background-color: $background-color_5;
                 border-radius: 5%;
+                margin-left: 10px;
+
             }
         }
 
         .card-txt {
             color: $color_4 ;
+            margin-left: 3px;
+            margin-top: 2px;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 300;
 
             h3 {
                 display: inline-block;
                 margin: 20px 0 0 15px;
                 border-radius: 20px 20px 0 0;
+
             }
 
             p {
@@ -208,43 +233,40 @@ a {
 
 
 
-        .icone-coeur {
-            display: flex;
-            justify-content: flex-end;
-            margin-right: 50px;
-
-            .fa-regular {
-                position: absolute;
-                line-height: 3;
-                width: 2px;
-                cursor: pointer;
-                color: black;
-            }
-
-
-            .full {
-                position: absolute;
-                opacity: 0;
-                line-height: 3;
-                width: 2px;
-
-
-                &:hover {
-                    opacity: 1;
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    background-image: linear-gradient(10deg, #FF79DA, #9356DC);
-                    transition: all 400ms;
-
-                }
-            }
+        .full {
+            position: absolute;
+            top: 83%;
+            right: 10%;
+            transform: translateY(-50%);
+            font-size: 25px;
+            cursor: pointer;
+            opacity: 0;
         }
 
+        .empty {
+            position: absolute;
+            top: 83%;
+            right: 10%;
+            transform: translateY(-50%);
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .full:hover {
+            color: transparent;
+            background-image: linear-gradient(10deg, #ff79da, #9356DC);
+            -webkit-background-clip: text;
+            background-clip: text;
+            transition: all 400ms;
+            opacity: 1;
+        }
     }
 }
 
+
+
 footer {
-    display: flex;
+
     background-color: $background-color_6;
     width: 100%;
     height: 180px;
@@ -258,6 +280,7 @@ footer {
         padding: 20px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .logofooter {
@@ -277,7 +300,110 @@ footer {
         margin-right: 10px;
     }
 
-    li {
-        margin-bottom: 8px;
+
+}
+
+@media (min-width: 767px) and (max-width: 1025px) {
+
+    .reservez-votre-menu {
+        .titre-reservation {
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .btn {
+
+            height: 50px;
+            width: 230px;
+        }
+    }
+
+    .fonction {
+        margin: 20px 0 50px 20px;
+
+        .titre-fonction {
+            font-size: 24px;
+        }
+
+        .fonction__bt {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        .fonction-content {
+            width: 30%;
+            font-size: 16px;
+        }
+    }
+
+
+    .restaurant {
+        padding-bottom: 0px;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .restaurant-card {
+            gap: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 60px;
+        }
+    }
+
+    footer {
+        @include footermedia;
+    }
+
+}
+
+@media (min-width:1025px) {
+
+    .logo {
+        @include logo;
+    }
+
+    .titre-reservation {
+        font-size: 40px;
+    }
+
+    .fonction {
+        display: flex;
+        flex-direction: column;
+        margin-left: 180px;
+        margin-right: 180px;
+
+        .fonction__bt {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            margin: 0 30px;
+        }
+
+    }
+
+    .restaurant {
+        padding-left: 150px;
+        padding-right: 150px;
+
+        .restaurant-card {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    br {
+        display: none;
+    }
+
+    footer {
+        @include footermedia
     }
 }

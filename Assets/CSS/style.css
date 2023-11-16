@@ -7,16 +7,19 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #111111;
 }
 
+.navmenu h1 {
+  display: none;
+}
 .navmenu .logo {
   text-align: center;
-  margin: 20px 0px 0px 0px;
-  padding-bottom: 10px;
-}
-.navmenu .logo img {
-  width: 50%;
+  margin: 20px 0 10px 0;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navmenu .position {
   display: flex;
@@ -55,11 +58,16 @@ a {
   border: none;
   height: 50px;
   width: 220px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   font-weight: 500;
   margin-top: 15px;
   font-family: "Roboto", sans-serif;
+  transition: transform 0.3s;
+}
+.reservez-votre-menu .btn:hover {
+  background: linear-gradient(#ff90e7, #a16eff);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .fonction {
@@ -95,7 +103,7 @@ a {
 }
 .fonction p {
   display: block;
-  margin: 5px 0 0 17px;
+  margin: 0px 0 0 17px;
   color: #131313;
 }
 .fonction .fonction__icon {
@@ -109,24 +117,30 @@ a {
 
 .restaurant {
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
 .restaurant h2 {
-  display: inline-block;
-  margin: 40px 10px 20px 20px;
-}
-.restaurant .restaurant-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-left: 25px;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  font-size: 24px;
 }
 .restaurant .card {
   background-color: #ffffff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
   padding-bottom: 20px;
-  width: 400px;
+  width: 90%;
   border-radius: 15px;
   position: relative;
+  margin: 20px;
+}
+.restaurant .card .restaurant-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .restaurant .card img {
   height: 231px;
@@ -154,9 +168,15 @@ a {
   color: #008766;
   background-color: #99e2d0;
   border-radius: 5%;
+  margin-left: 10px;
 }
 .restaurant .card .card-txt {
   color: #131313;
+  margin-left: 3px;
+  margin-top: 2px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
 }
 .restaurant .card .card-txt h3 {
   display: inline-block;
@@ -166,34 +186,33 @@ a {
 .restaurant .card .card-txt p {
   margin: 5px 0 0 17px;
 }
-.restaurant .card .icone-coeur {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 50px;
-}
-.restaurant .card .icone-coeur .fa-regular {
+.restaurant .card .full {
   position: absolute;
-  line-height: 3;
-  width: 2px;
+  top: 83%;
+  right: 10%;
+  transform: translateY(-50%);
+  font-size: 25px;
   cursor: pointer;
-  color: black;
-}
-.restaurant .card .icone-coeur .full {
-  position: absolute;
   opacity: 0;
-  line-height: 3;
-  width: 2px;
 }
-.restaurant .card .icone-coeur .full:hover {
-  opacity: 1;
+.restaurant .card .empty {
+  position: absolute;
+  top: 83%;
+  right: 10%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+.restaurant .card .full:hover {
+  color: transparent;
+  background-image: linear-gradient(10deg, #ff79da, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: linear-gradient(10deg, #FF79DA, #9356DC);
   transition: all 400ms;
+  opacity: 1;
 }
 
 footer {
-  display: flex;
   background-color: #353535;
   width: 100%;
   height: 180px;
@@ -206,6 +225,7 @@ footer .footercontent {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 footer .logofooter {
   filter: invert(1);
@@ -220,6 +240,122 @@ footer .liste {
 footer .fa-solid {
   margin-right: 10px;
 }
-footer li {
-  margin-bottom: 8px;
+
+@media (min-width: 767px) and (max-width: 1025px) {
+  .reservez-votre-menu .titre-reservation {
+    font-size: 35px;
+  }
+  .reservez-votre-menu p {
+    font-size: 20px;
+  }
+  .reservez-votre-menu .btn {
+    height: 50px;
+    width: 230px;
+  }
+  .fonction {
+    margin: 20px 0 50px 20px;
+  }
+  .fonction .titre-fonction {
+    font-size: 24px;
+  }
+  .fonction .fonction__bt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fonction .fonction-content {
+    width: 30%;
+    font-size: 16px;
+  }
+  .restaurant {
+    padding-bottom: 0px;
+  }
+  .restaurant h2 {
+    font-size: 24px;
+  }
+  .restaurant .restaurant-card {
+    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 60px;
+  }
+  footer {
+    height: 118px;
+  }
+  footer .logofooter {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  footer .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  footer .lis1 {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .logo {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .titre-reservation {
+    font-size: 40px;
+  }
+  .fonction {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .fonction .fonction__bt {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin: 0 30px;
+  }
+  .restaurant {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .restaurant .restaurant-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  br {
+    display: none;
+  }
+  footer {
+    height: 118px;
+  }
+  footer .logofooter {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  footer .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  footer .lis1 {
+    padding-right: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
