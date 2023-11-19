@@ -1,8 +1,72 @@
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+.containerload {
+  animation: hideLoader 4s forwards;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+  visibility: visible;
+}
+@keyframes hideLoader {
+  100% {
+    display: none;
+  }
+}
+.containerload .loadicon {
+  color: #ff79da;
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.containerload .loadlettre {
+  margin-bottom: 40px;
+  color: #ff79da;
+}
+.containerload .loadlettre .lettre {
+  font-size: 35px;
+  letter-spacing: 10px;
+  animation: fondu 2s linear infinite;
+}
+@keyframes fondu {
+  0% {
+    color: #ff79da;
+    text-shadow: 0 0 7px #ff79da;
+  }
+  90% {
+    color: #a16eff;
+    text-shadow: 0 0 7px #a16eff;
+  }
+  100% {
+    color: #ff79da;
+    text-shadow: 0 0 7px #ff79da;
+  }
+}
+.containerload .lettre:nth-child(1) {
+  animation-delay: 100ms;
+}
+.containerload .lettre:nth-child(2) {
+  animation-delay: 200ms;
+}
+.containerload .lettre:nth-child(3) {
+  animation-delay: 300ms;
+}
+
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   margin: 0px;
+  display: block;
 }
 
 a {
@@ -10,16 +74,18 @@ a {
   color: #111111;
 }
 
+.navmenu {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navmenu h1 {
   display: none;
 }
 .navmenu .logo {
-  text-align: center;
   margin: 20px 0 10px 0;
   width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .navmenu .position {
   display: flex;
@@ -63,7 +129,8 @@ a {
   font-weight: 500;
   margin-top: 15px;
   font-family: "Roboto", sans-serif;
-  transition: transform 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .reservez-votre-menu .btn:hover {
   background: linear-gradient(#ff90e7, #a16eff);
@@ -277,8 +344,10 @@ footer .fa-solid {
     gap: 28px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 60px;
+    margin: 5px;
+  }
+  .restaurant .card-content {
+    width: 48%;
   }
   footer {
     height: 118px;
@@ -304,12 +373,8 @@ footer .fa-solid {
 }
 @media (min-width: 1025px) {
   .logo {
-    text-align: center;
     margin: 20px 0 10px 0;
     width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .titre-reservation {
     font-size: 40px;
@@ -325,6 +390,7 @@ footer .fa-solid {
     flex-direction: row;
     gap: 25px;
     margin: 0 30px;
+    flex-wrap: nowrap;
   }
   .restaurant {
     padding-left: 150px;
@@ -333,6 +399,9 @@ footer .fa-solid {
   .restaurant .restaurant-card {
     display: flex;
     flex-wrap: wrap;
+  }
+  .card-content {
+    width: 50%;
   }
   br {
     display: none;
