@@ -24,9 +24,8 @@ $background-color_6: #353535;
     visibility: visible;
 
     @keyframes hideLoader {
-
         100% {
-            display: none;
+            visibility: hidden;
         }
     }
 
@@ -218,12 +217,15 @@ a {
     .fonction__icon {
         margin-left: 20px;
         color: $color_3;
+        cursor: pointer;
+
+        &:hover {
+            color: $color_2;
+        }
+
     }
 
-    .fa-store {
-        margin-left: 20px;
-        color: $color_2;
-    }
+
 
 }
 
@@ -267,7 +269,6 @@ a {
             width: 100%;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
-
         }
 
 
@@ -380,6 +381,12 @@ footer {
         list-style: none;
 
     }
+
+    .liss {
+        font-size: 18px;
+
+    }
+
 
     .fa-solid {
         margin-right: 10px;

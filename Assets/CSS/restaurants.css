@@ -1,19 +1,241 @@
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   margin: 0px;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+header .fa-arrow-left {
+  position: absolute;
+  left: 6px;
+  font-size: 24px;
+  top: 34px;
+}
 header .logo {
-  text-align: center;
-  margin: 20px 0px 0px 0px;
-  padding-bottom: 10px;
+  margin: 20px 0 10px 0;
+  width: 200px;
 }
-header .logo img {
-  width: 50%;
-}
-header .headimg {
+
+.headimg {
   height: 360px;
   width: 100%;
+}
+
+.menu {
+  position: relative;
+  margin-top: -90px;
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+.menu h1 {
+  font-family: Shrikhand;
+  font-size: 30px;
+}
+.menu .full {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: translateY(-34%);
+  font-size: 25px;
+  cursor: pointer;
+  opacity: 0;
+}
+.menu .empty {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: translateY(-34%);
+  font-size: 25px;
+  cursor: pointer;
+}
+.menu .full:hover {
+  color: transparent;
+  background-image: linear-gradient(10deg, #ff79da, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all 400ms;
+  opacity: 1;
+}
+.menu .card-menu {
+  margin-bottom: 40px;
+}
+.menu .card-menu .card {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  position: relative;
+  margin-bottom: 10px;
+}
+.menu .card-menu .card h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.menu .card-menu .card p {
+  font-size: 15px;
+  margin: 0px;
+}
+.menu .card-menu .card h4 {
+  margin-bottom: 7px;
+  margin-top: 0px;
+}
+.menu .card-menu .card .name {
+  padding: 2px;
+}
+.menu .card-menu .card .prix {
+  position: absolute;
+  right: 17px;
+  top: 32px;
+}
+.menu .bouton {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.menu .bouton .btn {
+  border-radius: 25px;
+  color: #ffffff;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  height: 50px;
+  width: 220px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu .bouton .btn:hover {
+  background: linear-gradient(#ff90e7, #a16eff);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: #353535;
+  width: 100%;
+  height: 180px;
+  color: #ffffff;
+}
+footer a {
+  color: white;
+}
+footer .footercontent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer .logofooter {
+  filter: invert(1);
+  padding-left: 9px;
+  width: 139px;
+  height: 20px;
+}
+footer .liste {
+  padding-left: 20px;
+  list-style: none;
+}
+footer .fa-solid {
+  margin-right: 10px;
+}
+
+@media (min-width: 767px) and (max-width: 1025px) {
+  .titre-heart {
+    display: flex;
+    justify-content: center;
+  }
+  .full {
+    position: absolute;
+    top: 5%;
+    right: 28%;
+  }
+  .empty {
+    position: absolute;
+    top: 5%;
+    right: 28%;
+  }
+  .card-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  footer {
+    height: 118px;
+  }
+  footer .logofooter {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  footer .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  footer .lis1 {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .menu {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1055px;
+  }
+  .titre-heart {
+    display: flex;
+    justify-content: center;
+  }
+  .full {
+    position: absolute;
+    top: 5%;
+    right: 28%;
+  }
+  .empty {
+    position: absolute;
+    top: 5%;
+    right: 28%;
+  }
+  .card-container {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  footer {
+    height: 118px;
+  }
+  footer .logofooter {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  footer .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  footer .lis1 {
+    padding-right: 20px;
+  }
 }/*# sourceMappingURL=restaurants.css.map */

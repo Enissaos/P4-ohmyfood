@@ -14,7 +14,7 @@
 }
 @keyframes hideLoader {
   100% {
-    display: none;
+    visibility: hidden;
   }
 }
 .containerload .loadicon {
@@ -176,9 +176,9 @@ a {
 .fonction .fonction__icon {
   margin-left: 20px;
   color: #7e7e7e;
+  cursor: pointer;
 }
-.fonction .fa-store {
-  margin-left: 20px;
+.fonction .fonction__icon:hover {
   color: #9356dc;
 }
 
@@ -303,6 +303,9 @@ footer .logofooter {
 footer .liste {
   padding-left: 20px;
   list-style: none;
+}
+footer .liss {
+  font-size: 18px;
 }
 footer .fa-solid {
   margin-right: 10px;
