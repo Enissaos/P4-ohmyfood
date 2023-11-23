@@ -153,6 +153,10 @@ a {
   height: 70px;
   margin: 10px;
   width: 90%;
+  cursor: pointer;
+}
+.fonction .fonction-content:hover .fonction__icon {
+  color: #9356dc;
 }
 .fonction .fonction_number {
   background-color: #9747ff;
@@ -176,10 +180,6 @@ a {
 .fonction .fonction__icon {
   margin-left: 20px;
   color: #7e7e7e;
-  cursor: pointer;
-}
-.fonction .fonction__icon:hover {
-  color: #9356dc;
 }
 
 .restaurant {

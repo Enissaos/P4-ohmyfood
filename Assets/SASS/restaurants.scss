@@ -68,7 +68,7 @@ header {
         position: absolute;
         top: 5%;
         right: 10%;
-        transform: translateY(-34%);
+        transform: translateY(-58%);
         font-size: 25px;
         cursor: pointer;
         opacity: 0;
@@ -78,7 +78,7 @@ header {
         position: absolute;
         top: 5%;
         right: 10%;
-        transform: translateY(-34%);
+        transform: translateY(-58%);
         font-size: 25px;
         cursor: pointer;
     }
@@ -270,15 +270,12 @@ footer {
 
     .full {
         position: absolute;
-        top: 5%;
-        right: 28%;
-
+        right: 32%;
     }
 
     .empty {
         position: absolute;
-        top: 5%;
-        right: 28%;
+        right: 32%;
 
     }
 
