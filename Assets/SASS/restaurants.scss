@@ -9,6 +9,10 @@ $background-color_4: #ffffff;
 $background-color_5: #99e2d0;
 $background-color_6: #353535;
 
+
+
+
+
 a {
     text-decoration: none;
     color: $color_6
@@ -44,7 +48,7 @@ header {
 .headimg {
     height: 360px;
     width: 100%;
-
+    object-fit: cover;
 }
 
 .menu {
@@ -88,21 +92,67 @@ header {
         opacity: 1;
     }
 
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .entrees {
+        animation: fadein;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+
+    .plats {
+        animation: fadein;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+    }
+
+    .desserts {
+        animation: fadein;
+        animation-duration: 6s;
+        animation-timing-function: ease-in;
+    }
+
+
+
     .card-menu {
         margin-bottom: 40px;
 
+
         .card {
             padding: 15px;
-            border-radius: 15px;
+            border-radius: 20px;
             background-color: #ffffff;
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
             position: relative;
             margin-bottom: 10px;
+            overflow: hidden;
 
-            h3 {
+
+            &:hover {
+                .check {
+                    margin: 0px;
+                }
+            }
+
+            &:hover {
+                .prix {
+                    margin-right: 70px;
+                }
+            }
+
+            .h3 {
                 font-size: 16px;
                 font-weight: 300;
-
+                border-bottom: solid;
+                border-color: $background-color_5;
             }
 
             p {
@@ -123,7 +173,28 @@ header {
             .prix {
                 position: absolute;
                 right: 17px;
-                top: 32px;
+                top: 43px;
+                transition: 400ms ease-out;
+                font-weight: bold;
+
+            }
+
+            .check {
+                display: flex;
+                background-color: #99e2d0;
+                color: white;
+                position: absolute;
+                right: 0;
+                height: 100%;
+                top: 0;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                width: 80px;
+                margin-right: -100px;
+                transition: 400ms ease-out;
             }
 
         }

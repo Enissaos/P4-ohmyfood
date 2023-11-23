@@ -29,6 +29,8 @@ header .logo {
 .headimg {
   height: 360px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
@@ -68,20 +70,52 @@ header .logo {
   transition: all 400ms;
   opacity: 1;
 }
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu .entrees {
+  animation: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+.menu .plats {
+  animation: fadein;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+.menu .desserts {
+  animation: fadein;
+  animation-duration: 6s;
+  animation-timing-function: ease-in;
+}
 .menu .card-menu {
   margin-bottom: 40px;
 }
 .menu .card-menu .card {
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
   margin-bottom: 10px;
+  overflow: hidden;
 }
-.menu .card-menu .card h3 {
+.menu .card-menu .card:hover .check {
+  margin: 0px;
+}
+.menu .card-menu .card:hover .prix {
+  margin-right: 70px;
+}
+.menu .card-menu .card .h3 {
   font-size: 16px;
   font-weight: 300;
+  border-bottom: solid;
+  border-color: #99e2d0;
 }
 .menu .card-menu .card p {
   font-size: 15px;
@@ -97,7 +131,26 @@ header .logo {
 .menu .card-menu .card .prix {
   position: absolute;
   right: 17px;
-  top: 32px;
+  top: 43px;
+  transition: 400ms ease-out;
+  font-weight: bold;
+}
+.menu .card-menu .card .check {
+  display: flex;
+  background-color: #99e2d0;
+  color: white;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 80px;
+  margin-right: -100px;
+  transition: 400ms ease-out;
 }
 .menu .bouton {
   display: flex;
