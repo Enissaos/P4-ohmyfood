@@ -66,9 +66,8 @@ header {
 
     .full {
         position: absolute;
-        top: 5%;
+        top: 53px;
         right: 10%;
-        transform: translateY(-58%);
         font-size: 25px;
         cursor: pointer;
         opacity: 0;
@@ -76,9 +75,8 @@ header {
 
     .empty {
         position: absolute;
-        top: 5%;
+        top: 53px;
         right: 10%;
-        transform: translateY(-58%);
         font-size: 25px;
         cursor: pointer;
     }
@@ -125,6 +123,10 @@ header {
     .card-menu {
         margin-bottom: 40px;
 
+        h3 {
+            font-size: 16px;
+            font-weight: 300;
+        }
 
         .card {
             padding: 15px;
@@ -148,12 +150,7 @@ header {
                 }
             }
 
-            .h3 {
-                font-size: 16px;
-                font-weight: 300;
-                border-bottom: solid;
-                border-color: $background-color_5;
-            }
+
 
             p {
                 font-size: 15px;
@@ -268,15 +265,17 @@ footer {
         justify-content: center;
     }
 
-    .full {
-        position: absolute;
-        right: 32%;
-    }
+    .menu {
+        .full {
+            position: absolute;
+            right: 35%;
+        }
 
-    .empty {
-        position: absolute;
-        right: 32%;
+        .empty {
+            position: absolute;
+            right: 35%;
 
+        }
     }
 
     .card-container {

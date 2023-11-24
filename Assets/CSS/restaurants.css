@@ -47,18 +47,16 @@ header .logo {
 }
 .menu .full {
   position: absolute;
-  top: 5%;
+  top: 53px;
   right: 10%;
-  transform: translateY(-58%);
   font-size: 25px;
   cursor: pointer;
   opacity: 0;
 }
 .menu .empty {
   position: absolute;
-  top: 5%;
+  top: 53px;
   right: 10%;
-  transform: translateY(-58%);
   font-size: 25px;
   cursor: pointer;
 }
@@ -96,6 +94,10 @@ header .logo {
 .menu .card-menu {
   margin-bottom: 40px;
 }
+.menu .card-menu h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
 .menu .card-menu .card {
   padding: 15px;
   border-radius: 20px;
@@ -110,12 +112,6 @@ header .logo {
 }
 .menu .card-menu .card:hover .prix {
   margin-right: 70px;
-}
-.menu .card-menu .card .h3 {
-  font-size: 16px;
-  font-weight: 300;
-  border-bottom: solid;
-  border-color: #99e2d0;
 }
 .menu .card-menu .card p {
   font-size: 15px;
@@ -210,13 +206,13 @@ footer .fa-solid {
     display: flex;
     justify-content: center;
   }
-  .full {
+  .menu .full {
     position: absolute;
-    right: 32%;
+    right: 35%;
   }
-  .empty {
+  .menu .empty {
     position: absolute;
-    right: 32%;
+    right: 35%;
   }
   .card-container {
     margin-left: 100px;
