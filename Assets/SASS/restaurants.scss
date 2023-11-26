@@ -64,19 +64,20 @@ header {
         font-size: 30px
     }
 
+    .titre-heart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .full {
-        position: absolute;
-        top: 53px;
-        right: 10%;
         font-size: 25px;
         cursor: pointer;
         opacity: 0;
     }
 
     .empty {
-        position: absolute;
-        top: 53px;
-        right: 10%;
+
         font-size: 25px;
         cursor: pointer;
     }
@@ -260,23 +261,23 @@ footer {
 }
 
 @media (min-width: 767px) and (max-width: 1025px) {
-    .titre-heart {
-        display: flex;
-        justify-content: center;
-    }
-
     .menu {
+        .titre-heart {
+            justify-content: center;
+        }
+
         .full {
-            position: absolute;
-            right: 35%;
+            margin-left: 20px;
+
         }
 
         .empty {
-            position: absolute;
-            right: 35%;
-
+            margin-left: 20px;
         }
     }
+
+
+
 
     .card-container {
         margin-left: 100px;
@@ -293,25 +294,20 @@ footer {
         margin-left: auto;
         margin-right: auto;
         max-width: 1055px;
-    }
 
-    .titre-heart {
-        display: flex;
-        justify-content: center;
-    }
 
-    .full {
-        position: absolute;
-        top: 5%;
-        right: 28%;
+        .titre-heart {
+            justify-content: center;
+        }
 
-    }
+        .full {
+            margin-left: 20px;
 
-    .empty {
-        position: absolute;
-        top: 5%;
-        right: 28%;
+        }
 
+        .empty {
+            margin-left: 20px;
+        }
     }
 
     .card-container {
