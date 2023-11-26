@@ -64,6 +64,13 @@ header {
         font-size: 30px
     }
 
+    .content-title {
+        border-bottom: solid;
+        border-bottom: solid;
+        width: 41px;
+        border-color: #99E2D0;
+    }
+
     .titre-heart {
         display: flex;
         align-items: center;
@@ -127,6 +134,7 @@ header {
         h3 {
             font-size: 16px;
             font-weight: 300;
+            padding-bottom: 4px;
         }
 
         .card {
@@ -154,18 +162,27 @@ header {
 
 
             p {
+
                 font-size: 15px;
                 margin: 0px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             h4 {
                 margin-bottom: 7px;
                 margin-top: 0px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
             }
 
             .name {
                 padding: 2px;
+                cursor: pointer;
+                width: 70%;
             }
 
             .prix {

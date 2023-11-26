@@ -22,6 +22,9 @@ $background-color_6: #353535;
     z-index: 9999;
     flex-direction: column;
     visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
+
 
     @keyframes hideLoader {
         100% {
@@ -49,9 +52,10 @@ $background-color_6: #353535;
         margin-bottom: 40px;
         color: #ff79da;
 
+
         .lettre {
             font-size: 35px;
-            letter-spacing: 10px;
+
             animation: fondu 2s linear infinite;
         }
     }
