@@ -81,12 +81,15 @@ header {
         font-size: 25px;
         cursor: pointer;
         opacity: 0;
+        position: absolute;
+        top: 57px;
     }
 
     .empty {
-
+        top: 57px;
         font-size: 25px;
         cursor: pointer;
+        position: absolute;
     }
 
     .full:hover {
@@ -290,6 +293,7 @@ footer {
 
         .empty {
             margin-left: 20px;
+            top: 55px;
         }
     }
 
@@ -318,12 +322,13 @@ footer {
         }
 
         .full {
-            margin-left: 20px;
+            margin-left: 24px;
 
         }
 
         .empty {
-            margin-left: 20px;
+            margin-left: 24px;
+            top: 55px;
         }
     }
 
