@@ -60,10 +60,14 @@ header .logo {
   font-size: 25px;
   cursor: pointer;
   opacity: 0;
+  position: absolute;
+  top: 57px;
 }
 .menu .empty {
+  top: 57px;
   font-size: 25px;
   cursor: pointer;
+  position: absolute;
 }
 .menu .full:hover {
   color: transparent;
@@ -224,6 +228,7 @@ footer .fa-solid {
   }
   .menu .empty {
     margin-left: 20px;
+    top: 55px;
   }
   .card-container {
     margin-left: 100px;
@@ -261,10 +266,11 @@ footer .fa-solid {
     justify-content: center;
   }
   .menu .full {
-    margin-left: 20px;
+    margin-left: 24px;
   }
   .menu .empty {
-    margin-left: 20px;
+    margin-left: 24px;
+    top: 55px;
   }
   .card-container {
     padding-left: 200px;
