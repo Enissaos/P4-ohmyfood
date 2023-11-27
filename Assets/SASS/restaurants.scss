@@ -71,6 +71,10 @@ header {
         border-color: #99E2D0;
     }
 
+    .icone-coeur {
+        margin-right: 26px;
+    }
+
     .titre-heart {
         display: flex;
         align-items: center;
@@ -177,7 +181,6 @@ header {
                 margin-bottom: 7px;
                 margin-top: 0px;
                 white-space: nowrap;
-                overflow: hidden;
                 text-overflow: ellipsis;
 
             }
@@ -288,7 +291,7 @@ footer {
 
         .full {
             margin-left: 20px;
-
+            top: 55px;
         }
 
         .empty {
@@ -323,7 +326,7 @@ footer {
 
         .full {
             margin-left: 24px;
-
+            top: 55px;
         }
 
         .empty {

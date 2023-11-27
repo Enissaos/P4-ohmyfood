@@ -51,6 +51,9 @@ header .logo {
   width: 41px;
   border-color: #99E2D0;
 }
+.menu .icone-coeur {
+  margin-right: 26px;
+}
 .menu .titre-heart {
   display: flex;
   align-items: center;
@@ -134,7 +137,6 @@ header .logo {
   margin-bottom: 7px;
   margin-top: 0px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu .card-menu .card .name {
@@ -225,6 +227,7 @@ footer .fa-solid {
   }
   .menu .full {
     margin-left: 20px;
+    top: 55px;
   }
   .menu .empty {
     margin-left: 20px;
@@ -267,6 +270,7 @@ footer .fa-solid {
   }
   .menu .full {
     margin-left: 24px;
+    top: 55px;
   }
   .menu .empty {
     margin-left: 24px;
